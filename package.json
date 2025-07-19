@@ -1,13 +1,24 @@
 {
   "name": "ci-cd-test",
   "version": "1.0.0",
-  "description": "CI/CD test project",
-  "main": "index.js",
+  "description": "CI/CD test project with actual build and tests",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Running tests...\" && echo \"✅ All tests passed!\"",
-    "build": "echo \"Building project...\" && echo \"✅ Build completed!\""
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "mkdir -p dist && cp -r src/* dist/ && echo \"✅ Build completed! Files copied to dist/\"",
+    "start": "node src/index.js",
+    "clean": "rm -rf dist"
   },
-  "keywords": ["ci", "cd", "github-actions"],
+  "keywords": ["ci", "cd", "github-actions", "jest", "testing"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/test"],
+    "testMatch": ["**/*.test.js"]
+  }
 } 
