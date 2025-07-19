@@ -10,6 +10,9 @@ console.log(`${a} + ${b} = ${add(a, b)}`);
 console.log(`${a} - ${b} = ${subtract(a, b)}`);
 console.log(`${a} * ${b} = ${multiply(a, b)}`);
 
+// PRワークフローテストのためのコメント
+console.log('📝 GitHub Actions PRワークフローをテスト中...');
+
 console.log('✅ アプリケーション正常終了');
 
 module.exports = { add, multiply, subtract }; 
