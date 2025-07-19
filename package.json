@@ -1,0 +1,13 @@
+{
+  "name": "ci-cd-test",
+  "version": "1.0.0",
+  "description": "CI/CD test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && echo \"✅ All tests passed!\"",
+    "build": "echo \"Building project...\" && echo \"✅ Build completed!\""
+  },
+  "keywords": ["ci", "cd", "github-actions"],
+  "author": "",
+  "license": "MIT"
+} 
